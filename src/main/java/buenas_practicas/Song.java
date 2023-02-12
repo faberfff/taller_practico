@@ -3,6 +3,10 @@ package buenas_practicas;
 
 /**
  * Clase modelo del objeto canción
+ *
+ * @version [1.0.01 2023-02-11]
+ * @autor[Faber Fernández - faverfff@gmail.com]
+ * @since [1.0.01]
  */
 public class Song {
 

@@ -6,6 +6,13 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Clase principal
+ *
+ * @version [1.0.01 2023-02-11]
+ * @author Faber or[Faber Fernández - faverfff@gmail.com
+ * @since [1.0.01]
+ */
 public class Main {
 
     public static void main(String[] args) throws IOException {
@@ -16,6 +23,10 @@ public class Main {
         ArrayList<Song> musi = new ArrayList();
         ArrayList<Song> sonGener = new ArrayList<>();
         ArrayList<Song> playList = new ArrayList<>();
+        ArrayList<Song> playList1 = new ArrayList<>();
+        ArrayList<Song> playList2 = new ArrayList<>();
+        ArrayList<Object> aList = new ArrayList<>(3);
+
         ArrayList<Song> sonYear = new ArrayList<>();
         MusicLibrary musik = new MusicLibrary();
         musi = listM.listaMusica();
@@ -83,13 +94,33 @@ public class Main {
                  * el sistema las almacena en un nuevo Array list
                  */
                 case 4: {
+
                     System.out.println("     Nuestra biblioteca musical :   ");
                     System.out.println("");
+
+
                     for (int i = 0; i < 5; i++) {
                         song = musik.createPlayList(musi);
                         playList.add(song);
                     }
-                    musik.imprimir(playList);
+
+                    for (int i = 0; i < 5; i++) {
+                        song = musik.createPlayList(musi);
+                        playList1.add(song);
+                    }
+
+                    for (int i = 0; i < 5; i++) {
+                        song = musik.createPlayList(musi);
+                        playList2.add(song);
+                    }
+                    aList.add(playList);
+                    aList.add(playList1);
+                    aList.add(playList2);
+
+                    aList.forEach(elemento -> {
+                        System.out.println(elemento.toString());
+                    });
+
                 }
                 break;
 
@@ -112,7 +143,7 @@ public class Main {
                 break;
             }
             /**
-             * Si el usuario ingresa la opcion 7 el sistema finalizara
+             * Si el usuario ingresa la opción 7 el sistema finalizara
              */
 
         } while (opcion != 7);

@@ -7,26 +7,20 @@ import java.util.ArrayList;
 
 /**
  * Clase que permite crear los diferentes comportamientos de las playList
+ * @version [1.0.01 2023-02-11]
+ * @author Faber Fernández - faverfff@gmail.com
+ * @since [1.0.01]
  */
 public class MusicLibrary {
 
     BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
     private ArrayList<Song> music = new ArrayList<>();
 
+    /**
+     * Constructor vacío
+     */
     public MusicLibrary(){
 
-    }
-
-    public MusicLibrary(ArrayList<Song> music) {
-        this.music = music;
-    }
-
-    public ArrayList<Song> getMusic() {
-        return music;
-    }
-
-    public void setMusic(ArrayList<Song> music) {
-        this.music = music;
     }
 
     @Override
@@ -37,28 +31,22 @@ public class MusicLibrary {
     }
 
 
-    public ArrayList<Song> crearMusica(Song so) {
-        for (Song s: music) {
-            music.add(s);
-        }
-        return music;
-    }
-
     /**
      * Método crea una lista de con canciones predeterminadas
      * @param musica
-     * @return
+     * @return canción
      * @throws IOException
      */
+
     public Song createPlayList(ArrayList<Song> musica) throws IOException {
         ArrayList<Song> myList = new ArrayList();
-        String name;
+        int id;
         Song son = new Song();
         System.out.println("Nombre de la canción");
-        name = bfr.readLine();
+        id =    Integer.parseInt(bfr.readLine());
         for (Song s: musica) {
-            if(s.getName().equalsIgnoreCase(name)){
-               son = s;
+            if(s.getId() == id){
+                son = s;
             }
         }
         return son;

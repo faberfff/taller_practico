@@ -1,23 +1,23 @@
 package buenas_practicas;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
 /**
  * Clase contenedora de la biblioteca principal de las canciones
+ * @version [1.0.01 2023-02-11]
+ * @author Faber Fernández - faverfff@gmail.com
+ * @since [1.0.01]
  */
 public class ListMusik {
 
-    BufferedReader bfr = new BufferedReader(new InputStreamReader(System.in));
-    ArrayList<Song> musi = new ArrayList();
+    private static final ArrayList<Song> musi = new ArrayList();
 
 
     /**
      * Método que crea las canciones y las guarda en un ArrayList
-     * @return
+     * @return ArrayList
      */
     public ArrayList<Song> listaMusica() {
 

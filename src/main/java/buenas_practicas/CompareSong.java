@@ -5,6 +5,10 @@ import java.util.Comparator;
 /**
  * Clase que implementa de la interfaz Comparator, su funcionalidad es ordenar
  * la música
+ *
+ * @version [1.0.01 2023-02-11]
+ * @author Faber or[Faber Fernández - faverfff@gmail.com]
+ * @since [1.0.01]
  */
 public class CompareSong implements Comparator<Song>{
 

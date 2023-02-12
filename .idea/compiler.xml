@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="taller_practico3" />
+        <module name="taller_practico" />
         <module name="tallerPractico" />
       </profile>
     </annotationProcessing>
